@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tp1';
-  color : string = 'white';
+  public color : string = 'white';
 
-  changeBackGroundColor(color: string){
+  public changeBackGroundColor(color: string){
     this.color=color;
   }
 }
