@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-mini-carre',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MiniCarreComponent implements OnInit {
 
   @Input() color : string = '';
+  @Output() newItemEvent: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeColor(): void{
+    this.newItemEvent.emit(this.color);
   }
 
 }

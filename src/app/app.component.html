@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="toto">
-  <app-carre></app-carre>
+<div class="toto" [ngStyle]="{'background-color': color}">
+  <app-carre (newItemEvent)="changeBackGroundColor($event)"></app-carre>
 </div>
 <app-footer></app-footer>

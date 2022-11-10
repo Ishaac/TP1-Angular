@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tp1';
+  color : string = 'white';
+
+  changeBackGroundColor(color: string){
+    this.color=color;
+  }
 }

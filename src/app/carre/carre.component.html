@@ -1,3 +1,3 @@
 <div class="carre">
-  <app-mini-carre *ngFor="let color of colors"></app-mini-carre>
+  <app-mini-carre (newItemEvent)="changeBackGroundColor($event)" *ngFor="let color of colors" [color]="color"></app-mini-carre>
 </div>
